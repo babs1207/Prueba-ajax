@@ -22,4 +22,11 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
     respond_to :js
   end
+
+  def update
+    @company = Company.find(params[:id])
+    @company.name = params[:company][:name]
+    @company.save
+    respond_to :js
+  end
 end
