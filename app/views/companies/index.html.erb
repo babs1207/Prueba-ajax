@@ -1,0 +1,11 @@
+<h1>Index</h1>
+
+<%= form_with(model: @company) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+
+<ul id='lista'>
+ <%= render @companies %>
+</ul>
