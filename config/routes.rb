@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :companies
+  resources :companies do 
+    resources :claims, only: :create
+  end
 
   root 'companies#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

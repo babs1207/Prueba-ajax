@@ -1,2 +1,2 @@
-$('.modal-body').html("<h5>Company: <%= @company.name %></h5>")
+$('.modal-body').html("<h5>Company: <%= @company.name %></h5> <%= j render 'claims', company: @company, claim: @claim %>")
 $('.modal').modal('show')
