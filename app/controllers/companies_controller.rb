@@ -5,6 +5,11 @@ class CompaniesController < ApplicationController
     @companies = Company.all 
   end
 
+  def show
+    @company = Company.find(params[:id]) 
+    respond_to :js
+  end
+
   def create
     @company = Company.new(name: params[:company][:name])
     @company.user = current_user

@@ -1,5 +1,6 @@
 <li id="<%= company.id %>">
   <%= company.name %>
-  <%= link_to "Destroy", company_path(company.id), method: :delete, data: { remote: true} %>
+  <%= link_to "Show", company_path(company.id), data: { remote: true} %> 
   <%= link_to "Edit", edit_company_path(company.id), data: { remote: true} %> 
+  <%= link_to "Destroy", company_path(company.id), method: :delete, data: { remote: true} %>
 </li>
