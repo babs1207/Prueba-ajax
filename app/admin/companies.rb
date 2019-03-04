@@ -11,14 +11,12 @@ ActiveAdmin.register Company do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+  permit_params :name, :user
+  filter :name, as: :select
 
-permit_params :name, :user
-filter :name, as: :select
-
-index do
-  column :id
-  column :name
-  actions
-end
-
+  index do
+    column :id
+    column :name
+    actions
+  end
 end
